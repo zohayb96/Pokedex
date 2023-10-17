@@ -1,0 +1,307 @@
+.App {
+  text-align: center;
+}
+
+.fantasyText {
+  color: black;
+  font-size: "20px";
+  font-family: "fantasy";
+  font-weight: bolder;
+}
+
+.team-status {
+  text-align: end;
+  font-size: 15px;
+  color: black;
+}
+
+.pokedexList {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    position: absolute;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(16, 196, 225, 0.81);
+    border-style: solid;
+    border-width: 7px;
+    border-color: black;
+    padding: 5px;
+    border-radius: 50%;
+    align-items: center;
+    display: block;  
+}
+
+
+.emptyPokeball {
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pokeball {
+  height: 5vmin;
+  padding: 0;
+  pointer-events: none;
+}
+
+.inputForm {
+  color: #375fac;
+  background: white;
+  border: none;
+ border-radius: 10px;
+ width: 50%;
+ padding: 8px;
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: bold;
+ font-size: 16px;
+}
+
+.fantasyButton {
+  padding: 5px;
+  margin-inline: 10px;
+  border-radius: 10px;
+  border-color: "#103c76";
+  border-style: solid;
+  background: #ffd324;
+  color: #375fac;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: fantasy;
+}
+
+.centered  {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pokeball {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .teamPokemon {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.pokemonListRow {
+  background-color: #eaecf0;
+  border-bottom-color: #d92d2b; 
+  width: 100%;
+  border-bottom: solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pokemonCard {
+  position: absolute;
+  padding: 30px;
+  color: #375fac;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 10px;
+}
+
+.teamPokemon {
+  animation: gelatine 5s infinite;
+}
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.975, 1.035); }
+  50% { transform: scale(1.04, 0.985); }
+  75% { transform: scale(0.98, 1.035); }
+}
+
+.row {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+.column {
+  float: left;
+  border-style: solid;
+    border-width: 10px;
+    border-color: #11356e;
+  width: 45%;
+  border-radius: 10px;
+  background-color: #ffcc02;
+  /* display: flex; */
+}
+
+.pokeList {
+    margin-top: 10px;
+    width: 100%;
+    /* background: black; */
+    overflow-x: hidden;
+    border-radius: 5px;
+    overflow-y: auto;
+    scroll-snap-align: start;
+    scroll-snap-type: inherit;
+    display: flow;
+    background: black;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    height: 500px;;
+}
+
+.pokeList1 {
+  /* padding: 10px; */
+  padding: 15px;
+  /* margin-top: 10px; */
+
+  border-style: solid;
+  background: #11356e;
+  border-radius: 10px;
+  overflow-y: auto;
+  display: flow;
+  height: 500px;;
+}
+
+.pokedex {
+  float: left;
+  position: relative;
+  
+  background: #242a2a;
+  border-radius: 10px;
+  border-style: solid;
+  padding-top: 15px;
+  border-width: 10px;
+  border-color: #d92d2b;
+  width: 45%;
+  background: #d92d2b;
+  /* display: flex; */
+}
+
+.pokemonTeam {
+  padding: 10px;
+  position: relative;
+  /* float: left; */
+  /* background: #242a2a; */
+  border-radius: 10px;
+  /* border-style: solid;  */
+  /* border-color: #d92d2b; */
+  /* border-widtrgb(255, 255, 255) */
+  /* border-color: #61dafb;
+  /* background: #d92d2b; */
+  /* display: flex; */
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6 )), url('https://i.pinimg.com/originals/3f/ea/cf/3feacfa69c2cb52991d4f21d2e61aa4e.jpg');
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .row {
+    display: contents;
+  }
+  .pokedex {
+    float: left;
+    position: relative;
+    background: #242a2a;
+    border-radius: 10px;
+    border-style: solid;
+    margin: 20px;
+    padding-top: 15px;
+    border-width: 10px;
+    border-color: #d92d2b;
+    width: 90%;
+    background: #d92d2b;
+    /* display: flex; */
+  }
+  .column {
+    float: left;
+    margin: 20px;
+    border-style: solid;
+      border-width: 10px;
+      border-color: #11356e;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #ffcc02;
+    /* display: flex; */
+  }
+}
+
+/* commonPokemonStyle class */
+.commonPokemonStyle {
+  background-color: #375fac;
+  border-bottom-color: #d92d2b;
+  border-bottom: solid;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* commonButtonStyle class */
+.commonButtonStyle {
+  background: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* altButtonStyle class */
+.altButtonStyle {
+  background: none;
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+  color: black;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* commonPokeballIconStyle class */
+.commonPokeballIconStyle {
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
